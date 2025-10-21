@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Esercizio 1</h2>
+  
+  <!-- Bottone che cambia la visibilità -->
+  <button (click)="cambiaVisibilita()">
+    {{ mostraMessaggio ? 'NASCONDI' : 'MOSTRA' }}
+  </button>
+
+  <!-- Messaggio che appare/scompare con *ngIf -->
+  <div *ngIf="mostraMessaggio" class="messaggio">
+    🎉 Ciao! Questo messaggio si vede solo quando mostraMessaggio = true
+  </div>
+
+  <!-- Esempio extra: puoi anche usare else -->
+  <div *ngIf="!mostraMessaggio" class="messaggio-nascosto">
+    📦 Il messaggio è nascosto!
+  </div>
+</div>
